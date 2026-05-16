@@ -1,0 +1,12 @@
+{
+    "result": true,
+    "data": {
+        "full_name": "septian",
+        "username": "Sptrgaming",
+        "balance": 0,
+        "point": 0,
+        "level": "Basic",
+        "registered": "2026-05-15 02:15:54"
+    },
+    "message": "Successfully got your account details."
+}
