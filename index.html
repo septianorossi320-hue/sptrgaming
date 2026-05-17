@@ -309,3 +309,350 @@
   © 2026 SPTR Gaming • Website Top Up Modern
 </footer></body>
 </html>
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPTR Gaming</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0b0b0f;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(140,0,255,0.25), transparent 35%),
+                  radial-gradient(circle at bottom left, rgba(111,0,255,0.18), transparent 30%);
+      z-index: -1;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      backdrop-filter: blur(10px);
+      background: rgba(15,15,20,0.7);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #b56cff;
+      text-shadow: 0 0 15px #8f3cff;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #b56cff;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .hero h1 span {
+      color: #b56cff;
+      text-shadow: 0 0 20px #8f3cff;
+    }
+
+    .hero p {
+      color: #bdbdbd;
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: linear-gradient(90deg, #7b2ff7, #b56cff);
+      border-radius: 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 0 25px rgba(181,108,255,0.5);
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 0 35px rgba(181,108,255,0.8);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    .games {
+      padding: 70px 8%;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: rgba(20,20,28,0.95);
+      border: 1px solid rgba(181,108,255,0.18);
+      border-radius: 24px;
+      overflow: hidden;
+      transition: 0.35s ease;
+      position: relative;
+      box-shadow: 0 0 20px rgba(0,0,0,0.35);
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 0 30px rgba(181,108,255,0.4);
+      border-color: #b56cff;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 22px;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #bdbdbd;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      border-radius: 14px;
+      background: linear-gradient(90deg,#7b2ff7,#b56cff);
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      box-shadow: 0 0 20px rgba(181,108,255,0.7);
+      transform: scale(1.02);
+    }
+
+    .features {
+      padding: 50px 8%;
+    }
+
+    .feature-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      gap: 20px;
+    }
+
+    .feature {
+      background: rgba(18,18,25,0.95);
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: 0.3s;
+    }
+
+    .feature:hover {
+      border-color: #b56cff;
+      transform: translateY(-5px);
+    }
+
+    .feature h4 {
+      margin-bottom: 10px;
+      color: #b56cff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #9a9a9a;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 40px;
+    }
+
+    @media(max-width:768px){
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+    }
+  </style></head>
+<body><header>
+  <div class="logo">SPTR Gaming</div>  <nav>
+    <a href="#">Home</a>
+    <a href="#games">Games</a>
+    <a href="#">Cek Transaksi</a>
+    <a href="#">WhatsApp</a>
+  </nav>
+</header><section class="hero">
+  <div class="hero-content">
+    <h1>Top Up Game <span>Murah</span> & Super Cepat</h1>
+    <p>
+      Website top up modern tema hitam ungu premium neon.
+      Support Mobile Legends, Free Fire, PUBG Mobile dan Honor Of Kings.
+    </p><a href="#games" class="hero-btn">Top Up Sekarang</a>
+
+  </div>
+</section><section class="games" id="games">
+  <h2 class="section-title">Popular Games</h2>  <div class="game-grid"><div class="card">
+  <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop" alt="Mobile Legends">
+  <div class="card-content">
+    <h3>Mobile Legends</h3>
+    <p>Top up diamond ML murah dan proses instan otomatis.</p>
+    <a href="#" class="btn">Top Up</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop" alt="Free Fire">
+  <div class="card-content">
+    <h3>Free Fire</h3>
+    <p>Diamond Free Fire cepat masuk dan harga bersahabat.</p>
+    <a href="#" class="btn">Top Up</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=1200&auto=format&fit=crop" alt="PUBG Mobile">
+  <div class="card-content">
+    <h3>PUBG Mobile</h3>
+    <p>Beli UC PUBG Mobile dengan pembayaran QRIS mudah.</p>
+    <a href="#" class="btn">Top Up</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop" alt="Honor of Kings">
+  <div class="card-content">
+    <h3>Honor Of Kings</h3>
+    <p>Top up token HOK modern cepat dan aman.</p>
+    <a href="#" class="btn">Top Up</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1200&auto=format&fit=crop" alt="Valorant">
+  <div class="card-content">
+    <h3>Valorant</h3>
+    <p>Top up Valorant Points cepat dan aman.</p>
+    <a href="#" class="btn">Top Up</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1200&auto=format&fit=crop" alt="Genshin Impact">
+  <div class="card-content">
+    <h3>Genshin Impact</h3>
+    <p>Top up Genesis Crystal murah dan instan.</p>
+    <a href="#" class="btn">Top Up</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?q=80&w=1200&auto=format&fit=crop" alt="Call Of Duty Mobile">
+  <div class="card-content">
+    <h3>COD Mobile</h3>
+    <p>Beli CP CODM harga murah dan cepat.</p>
+    <a href="#" class="btn">Top Up</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?q=80&w=1200&auto=format&fit=crop" alt="League of Legends">
+  <div class="card-content">
+    <h3>League Of Legends</h3>
+    <p>Top up Riot Points premium dan terpercaya.</p>
+    <a href="#" class="btn">Top Up</a>
+  </div>
+</div>
+
+  </div>
+</section><section class="features">
+  <h2 class="section-title">Kenapa Pilih Kami?</h2>  <div class="feature-box">
+    <div class="feature">
+      <h4>⚡ Proses Cepat</h4>
+      <p>Diamond masuk otomatis hanya dalam hitungan detik.</p>
+    </div><div class="feature">
+  <h4>🔒 Aman & Terpercaya</h4>
+  <p>Pembayaran aman dan website modern premium.</p>
+</div>
+
+<div class="feature">
+  <h4>💳 Pembayaran Lengkap</h4>
+  <p>Support QRIS, DANA, OVO dan transfer bank.</p>
+</div>
+
+<div class="feature">
+  <h4>🎮 Harga Murah</h4>
+  <p>Harga top up lebih hemat dengan proses instan.</p>
+</div>
+
+  </div>
+</section><footer>
+  © 2026 SPTR Gaming • Website Top Up Modern
+</footer></body>
+</html>
