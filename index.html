@@ -1,387 +1,311 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html><html lang="id">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="./vendor/slick/slick.css">
-   <link rel="stylesheet" href="./vendor/slick/slick-theme.css">
-   <link rel="stylesheet" href="css/style.css">
-   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-   <title>Codashop - Indonesia</title>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPTR Gaming</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-<body>
+    body {
+      background: #0b0b0f;
+      color: white;
+      overflow-x: hidden;
+    }
 
-   <!-- Notification -->
-   <div class="notification" id="notif">
-      <div class="notification__container">
-         <i class="fas fa-bell"></i>
-      </div>
-   </div>
+    body::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(140,0,255,0.25), transparent 35%),
+                  radial-gradient(circle at bottom left, rgba(111,0,255,0.18), transparent 30%);
+      z-index: -1;
+    }
 
-   <!-- Header -->
-   <header class="header">
-      <div class="header__container">
-         <div class="header__nav">
-            <div class="logo">
-               <img src="./img/codashop-logo.png" class="logo__img" alt="logo">
-               <p class="logo__slogan">
-                  Cara tercepat dan termudah untuk pembelian kredit permainan.
-               </p>
-            </div>
-            <div class="search">
-               <span class="search__icon" id="search-btn">
-                  <i class="fas fw fa-search"></i>
-               </span>
-            </div>
-         </div>
-         <form class="search-form" id="search-form">
-            <div class="search-form__container">
-               <input type="text" class="search-form__input" id="input" placeholder="Pencarian game atau voucher">
-            </div>
-         </form>
-      </div>
-   </header>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      backdrop-filter: blur(10px);
+      background: rgba(15,15,20,0.7);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
 
-   <!-- Banner -->
-   <section class="banner">
-      <div class="banner__container">
-         <div class="banner__slide">
-            <img src="./img/banner/mlbb_50dpromo_id.jpg" class="banner__img" alt="">
-         </div>
-         <div class="banner__slide">
-            <img src="./img/banner/pubg_promo_id.jpg" class="banner__img" alt="">
-         </div>
-         <div class="banner__slide">
-            <img src="./img/banner/msw_promo_id.jpg" class="banner__img" alt="">
-         </div>
-         <div class="banner__slide">
-            <img src="./img/banner/la_promo_id.jpg" class="banner__img" alt="">
-         </div>
-         <div class="banner__slide">
-            <img src="./img/banner/hago_promo_id.jpg" class="banner__img" alt="">
-         </div>
-      </div>
-   </section>
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #b56cff;
+      text-shadow: 0 0 15px #8f3cff;
+    }
 
-   <!-- Category 1 Category Popular -->
-   <section class="category category--1">
-      <div class="category__container">
-         <h1 class="category__title">Populer</h1>
-         <div class="category__product">
-            <a href="#" class="category__product-container">
-               <img src="./img/game/mlbb_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Mobile Legends</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/freefire_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Free Fire</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/PUBG_RPS11_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">PUBG Mobile</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/lor_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Legends of Runeterra</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/codm_id_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Call of Duty Mobile</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/hago_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">HAGO</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/idle_legends_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Idle Legends</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/The_World_Of_Dragon_Nest.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">World of Dragon Nest</p>
-            </a>
-         </div>
-      </div>
-   </section>
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      transition: 0.3s;
+      font-weight: 500;
+    }
 
-   <!-- Category 2 Category Top-Up Game -->
-   <section class="category category--2">
-      <div class="category__container">
-         <h1 class="category__title">Top-Up Game Langsung</h1>
-         <div class="category__product">
-            <a href="#" class="category__product-container">
-               <img src="./img/game/ml_adventure_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">Mobile Legends: Adventure</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/ragnarok_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Ragnarok M</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/MARVELsuperwar_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">MARVEL Super War</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/honkaiimpact3_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">Honkai Impact 3</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/PointBlank_ID_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Point Blank</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/Blockman Go_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">Blockman Go: Blocky Mods</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/aov_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">AOV</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/gameofsultans_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Game of Sultans</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/chessrush_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Chess Rush</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/pubgm_lite_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">PUBG Mobile Lite</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/onmyojiarena_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Onmyoji Arena</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/lordsmobile_tile.jpeg" class="category__product-img" alt="">
-               <p class="category__product-title">Lord Mobile</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/YongHeroes_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">Young Heroes</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/CrasherOrigin_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">Crasher: Origin</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/lumiasaga_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Lumia Saga</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/devilhunter_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">Devil Hunter</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/last_empire_war_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Last Empire War Z</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/love_nikki_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Love Nikki</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/crisis_action_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Crisis Action</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/speed_drifter_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Speed Drifter</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/LightofThel_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">Light of Thel:Glory of Cepheus</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/higgs_domino_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Higgs Domino</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/kingsofkings_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">King of Kings</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/mu_origin_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">MU Origin 2</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/legacy_of_discord_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Legacy of Discord</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/disorder_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">Disorder</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/dominoqq_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">Domino Qiu Qiu</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/domino99_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Domino Qiu Qiu: Domino 99</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/pokertexas_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">Poker Texas Boyaa</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/game/wor_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">War of Rings</p>
-            </a>
-         </div>
-      </div>
-   </section>
+    nav a:hover {
+      color: #b56cff;
+    }
 
-   <!-- Category 3 Category Top-Up Video -->
-   <section class="category category--3">
-      <div class="category__container">
-         <h1 class="category__title">Top-Up Video Langsung</h1>
-         <div class="category__product">
-            <a href="#" class="category__product-container">
-               <img src="./img/streamapp/bigo_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Bigo Live</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/streamapp/likee_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">Likee</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/streamapp/starmaker_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">StarMaker</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/streamapp/yome_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">Yome Live</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/streamapp/livu_promo_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">LivU</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/streamapp/tumile_promo_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Tumile</p>
-            </a>
-         </div>
-      </div>
-   </section>
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-   <!-- Category 4 Category Code Voucer -->
-   <section class="category category--3">
-      <div class="category__container">
-         <h1 class="category__title">Beli Kode Voucer</h1>
-         <div class="category__product">
-            <a href="#" class="category__product-container">
-               <img src="./img/codevoucer/gp_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Google Play Code</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/codevoucer/steam_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Steam Wallet Code</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/codevoucer/psn_store_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">PlayStation PSN Card</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/codevoucer/tinder_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Tinder</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/codevoucer/spotify_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">Spotify Premium Voucher</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/codevoucer/PUBG_RPS11_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">PUBG Mobile UC Redeem Code</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/codevoucer/garena_shells_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Garena Shells</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/codevoucer/megaxus_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Megaxus</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/codevoucer/gemscool_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Gemscool</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/codevoucer/nintendoeshop_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Nintendo eShop (US)</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/codevoucer/xboxgiftcard_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Xbox Gift Card (US)</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/codevoucer/FIFA_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Fifa Points Voucher</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/codevoucer/viu_tile.jpg" class="category__product-img" alt="">
-               <p class="category__product-title">Viu</p>
-            </a>
-            <a href="#" class="category__product-container">
-               <img src="./img/codevoucer/vidio_tile.png" class="category__product-img" alt="">
-               <p class="category__product-title">Vidio</p>
-            </a>
-         </div>
-      </div>
-   </section>
+    .hero-content {
+      max-width: 850px;
+    }
 
-   <!-- About -->
-   <section class="about">
-      <div class="about__container">
-         <h1 class="about__title">Codashop: Website top-up terbesar & terpercaya di Indonesia</h1>
-         <p class="about__description">
-            Setiap bulannya, jutaan gamers menggunakan Codashop untuk melakukan pembelian kredit game dengan lancar:
-            tanpa registrasi ataupun log-in, dan kredit permainan akan ditambahkan secara instan. Top-up Mobile Legends,
-            Free Fire, Ragnarok M, dan berbagai game lainnya!
-         </p>
-         <ul class="card">
-            <li class="card__item">
-               <div class="card__img">
-                  <img src="img/icons/pay_in_seconds.png" alt="" class="card__icon">
-               </div>
-               <div class="card__content">
-                  <h3 class="card__title">Bayar dalam hitungan detik</h3>
-                  <p class="card__description">
-                     Hanya dibutuhkan beberapa detik saja untuk menyelesaikan pembayaran di Codashop karena situs kami
-                     berfungsi dengan baik dan mudah untuk digunakan.
-                  </p>
-               </div>
-            </li>
-            <li class="card__item">
-               <div class="card__img">
-                  <img src="img/icons/fast_delivery.png" alt="" class="card__icon">
-               </div>
-               <div class="card__content">
-                  <h3 class="card__title">Pengiriman Instan</h3>
-                  <p class="card__description">
-                     Ketika kamu melakukan top-up di Codashop, item atau barang yang kamu beli akan selalu dikirim ke
-                     akun kamu secara instan dan cepat, tanpa tertunda.
-                  </p>
-               </div>
-            </li>
-            <li class="card__item">
-               <div class="card__img">
-                  <img src="img/icons/best_payment_method.png" alt="" class="card__icon">
-               </div>
-               <div class="card__content">
-                  <h3 class="card__title">Metode pembayaran terbaik</h3>
-                  <p class="card__description">
-                     Kami menawarkan begitu banyak pilihan pembayaran mulai dari potong pulsa, e-wallet, bank transfer,
-                     dan pembayaran di mini market terdekat.
-                  </p>
-               </div>
-            </li>
-           </section>  <footer>
-    © 2026 SPTR Gaming - All Rights Reserved
-  </footer></body>
-         </html>
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .hero h1 span {
+      color: #b56cff;
+      text-shadow: 0 0 20px #8f3cff;
+    }
+
+    .hero p {
+      color: #bdbdbd;
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: linear-gradient(90deg, #7b2ff7, #b56cff);
+      border-radius: 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 0 25px rgba(181,108,255,0.5);
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 0 35px rgba(181,108,255,0.8);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    .games {
+      padding: 70px 8%;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: rgba(20,20,28,0.95);
+      border: 1px solid rgba(181,108,255,0.18);
+      border-radius: 24px;
+      overflow: hidden;
+      transition: 0.35s ease;
+      position: relative;
+      box-shadow: 0 0 20px rgba(0,0,0,0.35);
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 0 30px rgba(181,108,255,0.4);
+      border-color: #b56cff;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 22px;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #bdbdbd;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      border-radius: 14px;
+      background: linear-gradient(90deg,#7b2ff7,#b56cff);
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      box-shadow: 0 0 20px rgba(181,108,255,0.7);
+      transform: scale(1.02);
+    }
+
+    .features {
+      padding: 50px 8%;
+    }
+
+    .feature-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      gap: 20px;
+    }
+
+    .feature {
+      background: rgba(18,18,25,0.95);
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: 0.3s;
+    }
+
+    .feature:hover {
+      border-color: #b56cff;
+      transform: translateY(-5px);
+    }
+
+    .feature h4 {
+      margin-bottom: 10px;
+      color: #b56cff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #9a9a9a;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 40px;
+    }
+
+    @media(max-width:768px){
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+    }
+  </style></head>
+<body><header>
+  <div class="logo">SPTR Gaming</div>  <nav>
+    <a href="#">Home</a>
+    <a href="#games">Games</a>
+    <a href="#">Cek Transaksi</a>
+    <a href="#">WhatsApp</a>
+  </nav>
+</header><section class="hero">
+  <div class="hero-content">
+    <h1>Top Up Game <span>Murah</span> & Super Cepat</h1>
+    <p>
+      Website top up modern tema hitam ungu premium neon.
+      Support Mobile Legends, Free Fire, PUBG Mobile dan Honor Of Kings.
+    </p><a href="#games" class="hero-btn">Top Up Sekarang</a>
+
+  </div>
+</section><section class="games" id="games">
+  <h2 class="section-title">Popular Games</h2>  <div class="game-grid"><div class="card">
+  <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop" alt="Mobile Legends">
+  <div class="card-content">
+    <h3>Mobile Legends</h3>
+    <p>Top up diamond ML murah dan proses instan otomatis.</p>
+    <a href="#" class="btn">Top Up</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop" alt="Free Fire">
+  <div class="card-content">
+    <h3>Free Fire</h3>
+    <p>Diamond Free Fire cepat masuk dan harga bersahabat.</p>
+    <a href="#" class="btn">Top Up</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=1200&auto=format&fit=crop" alt="PUBG Mobile">
+  <div class="card-content">
+    <h3>PUBG Mobile</h3>
+    <p>Beli UC PUBG Mobile dengan pembayaran QRIS mudah.</p>
+    <a href="#" class="btn">Top Up</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop" alt="Honor of Kings">
+  <div class="card-content">
+    <h3>Honor Of Kings</h3>
+    <p>Top up token HOK modern cepat dan aman.</p>
+    <a href="#" class="btn">Top Up</a>
+  </div>
+</div>
+
+  </div>
+</section><section class="features">
+  <h2 class="section-title">Kenapa Pilih Kami?</h2>  <div class="feature-box">
+    <div class="feature">
+      <h4>⚡ Proses Cepat</h4>
+      <p>Diamond masuk otomatis hanya dalam hitungan detik.</p>
+    </div><div class="feature">
+  <h4>🔒 Aman & Terpercaya</h4>
+  <p>Pembayaran aman dan website modern premium.</p>
+</div>
+
+<div class="feature">
+  <h4>💳 Pembayaran Lengkap</h4>
+  <p>Support QRIS, DANA, OVO dan transfer bank.</p>
+</div>
+
+<div class="feature">
+  <h4>🎮 Harga Murah</h4>
+  <p>Harga top up lebih hemat dengan proses instan.</p>
+</div>
+
+  </div>
+</section><footer>
+  © 2026 SPTR Gaming • Website Top Up Modern
+</footer></body>
+</html>
