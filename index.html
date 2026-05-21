@@ -1,1 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPTR Gaming Store</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+padding:20px;
+border-bottom-left-radius:25px;
+border-bottom-right-radius:25px;
+box-shadow:0 4px 20px rgba(0,0,0,0.3);
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+}
+
+.sub{
+font-size:14px;
+opacity:.9;
+margin-top:5px;
+}
+
+.banner{
+margin-top:20px;
+background:rgba(255,255,255,0.12);
+padding:20px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+}
+
+.banner h2{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.banner p{
+font-size:14px;
+opacity:.9;
+}
+
+.search{
+padding:20px;
+}
+
+.search input{
+width:100%;
+padding:15px;
+border:none;
+outline:none;
+border-radius:15px;
+background:#1e293b;
+color:white;
+font-size:15px;
+}
+
+.section-title{
+padding:0 20px;
+font-size:20px;
+font-weight:600;
+margin-bottom:15px;
+}
+
+.game-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:0 20px 30px;
+}
+
+.game-card{
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+transition:.3s;
+box-shadow:0 4px 10px rgba(0,0,0,0.25);
+}
+
+.game-card:hover{
+transform:translateY(-5px);
+}
+
+.game-card img{
+width:100%;
+height:130px;
+object-fit:cover;
+}
+
+.game-info{
+padding:12px;
+}
+
+.game-info h3{
+font-size:15px;
+margin-bottom:5px;
+}
+
+.game-info p{
+font-size:12px;
+opacity:.7;
+}
+
+.badge{
+display:inline-block;
+margin-top:10px;
+padding:5px 10px;
+background:#22c55e;
+border-radius:10px;
+font-size:11px;
+font-weight:600;
+}
+
+.transaksi{
+padding:20px;
+}
+
+.table{
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+}
+
+.table-header{
+display:flex;
+justify-content:space-between;
+padding:15px;
+background:#334155;
+font-size:13px;
+font-weight:600;
+}
+
+.row{
+display:flex;
+justify-content:space-between;
+padding:15px;
+border-top:1px solid rgba(255,255,255,0.05);
+font-size:12px;
+}
+
+.success{
+color:#22c55e;
+font-weight:600;
+}
+
+footer{
+padding:30px 20px;
+text-align:center;
+font-size:12px;
+opacity:.6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">SPTR Gaming</div>
+<div class="sub">Top Up Game Murah & Otomatis ⚡</div>
+
+<div class="banner">
+<h2>Top Up Cepat 24 Jam</h2>
+<p>Diamond masuk otomatis setelah pembayaran berhasil 🔥</p>
+</div>
+</header>
+
+<div class="search">
+<input type="text" placeholder="Cari game favorit kamu...">
+</div>
+
+<div class="section-title">
+🔥 Game Populer
+</div>
+
+<div class="game-grid">
+
+<div class="game-card">
+<img src="https://i.ibb.co/8D2D5Wz/ml.jpg">
+<div class="game-info">
+<h3>Mobile Legends</h3>
+<p>Diamond murah & cepat</p>
+<div class="badge">Best Seller</div>
+</div>
+</div>
+
+<div class="game-card">
+<img src="https://i.ibb.co/T8r7m5h/ff.jpg">
+<div class="game-info">
+<h3>Free Fire</h3>
+<p>Proses 1-5 detik</p>
+<div class="badge">Populer</div>
+</div>
+</div>
+
+<div class="game-card">
+<img src="https://i.ibb.co/7Wz4X6q/pubg.jpg">
+<div class="game-info">
+<h3>PUBG Mobile</h3>
+<p>UC termurah</p>
+<div class="badge">Murah</div>
+</div>
+</div>
+
+<div class="game-card">
+<img src="https://i.ibb.co/N6m6Y0T/hok.jpg">
+<div class="game-info">
+<h3>Honor Of Kings</h3>
+<p>Top up instant</p>
+<div class="badge">New</div>
+</div>
+</div>
+
+</div>
+
+<div class="transaksi">
+
+<div class="section-title">
+📈 Transaksi Terbaru
+</div>
+
+<div class="table">
+
+<div class="table-header">
+<span>ID</span>
+<span>Status</span>
+</div>
+
+<div class="row">
+<span>ffA712x</span>
+<span class="success">SUCCESS</span>
+</div>
+
+<div class="row">
+<span>mlB921z</span>
+<span class="success">SUCCESS</span>
+</div>
+
+<div class="row">
+<span>vkC551p</span>
+<span class="success">SUCCESS</span>
+</div>
+
+<div class="row">
+<span>ffD883m</span>
+<span class="success">SUCCESS</span>
+</div>
+
+<div class="row">
+<span>mlE220k</span>
+<span class="success">SUCCESS</span>
+</div>
+
+</div>
+</div>
+
+<footer>
+© 2026 SPTR Gaming Store
+</footer>
+
+</body>
+  </html>
